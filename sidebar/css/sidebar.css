@@ -1,0 +1,33 @@
+@import url(http://fonts.googleapis.com/css?family=Titillium+Web:300);
+ul li{
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+li a{
+	text-decoration: none;
+	color:black;
+}
+li a:hover{
+	color: #ef5350 ;
+}
+.fa-2x {
+	font-size: 2em;
+}
+.main-menu ul li{
+	margin-top:20px;
+}
+.main-menu{
+	background: #fbfbfb;
+	border-right:1px solid #e5e5e5;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	height: 100%;
+	left:0;
+	width: 20%;
+	overflow: hidden;
+	transform: width 0.5s linear;
+	-webkit-transform:translateZ(0) scale(1,1);
+	z-index: 1000;
+}
