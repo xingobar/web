@@ -45,8 +45,6 @@ li:hover{
 	width: 52px;
 	overflow: hidden;
 	box-shadow: 5px 5px 5px #bdbdbd;
-	position: absolute;
-	left:-100px;
 	/*https://matthewlein.com/ceaser/*/
 	transition:width 1.65s  cubic-bezier(0.680, -0.550, 0.265, 1.550);
 	/*http://stackoverflow.com/questions/3087360/cant-stop-animation-at-end-of-one-cycle*/
