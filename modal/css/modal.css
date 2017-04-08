@@ -22,7 +22,7 @@
 
 	animation-duration: 1s;
 	animation-iteration-count: 1;
-	animation-name: modalAnimateTop;
+	animation-name: bounce;
 
 	-moz-animation-duration:1s;
 	-webkit-animation-duration:1s;
@@ -32,19 +32,68 @@
 	-webkit-animation-iteration-count:1;
 	-o-animation-iteration-count:1;
 
-	-moz-animation-name:modalAnimateTop;
-	-webkit-animation-name:modalAnimateTop;
-	-o-animation-name:modalAnimateTop;
+	-moz-animation-name:bounce;
+	-webkit-animation-name:bounce;
+	-o-animation-name:bounce;
+
 }
-@keyframes modalAnimateTop{
+@keyframes bounce{
 	0%{
+		transform: translateY(-100%);
+		opacity: 0;
+	}
+	5%{
+		transform: translateY(-100%);
+		opacity: 0;
+	}
+	15%{
+		transform: translateY(15%);
+		padding-bottom: 5px;
+	}
+	30%{
+		transform: translateY(-50%);
+	}
+	40%{
+		transform: translateY(0%);
+		padding-bottom: 6px;
+	}
+	50%{
+		transform: translateY(-30%);
+	}
+	70% {
+    transform:translateY(0%);
+    padding-bottom: 7px;
+	}
+	80% {
+	  transform:translateY(-15%);
+	}
+	90% {
+	  transform:translateY(0%);
+	  padding-bottom: 8px;
+	}
+	95% {
+	  transform:translateY(-7%);
+	}
+	97% {
+	  transform:translateY(0%);
+	  padding-bottom: 9px;
+	}
+	99% {
+	  transform:translateY(-3%);
+	}
+	100% {
+	  transform:translateY(0);
+	  padding-bottom: 9px;
+	  opacity: 1;
+	}
+	/*0%{
 		top:-300px;
 		opacity:0;
 	}
 	100%{
 		top:0px;
 		opacity:1;
-	}
+	}*/
 }
 @-moz-keyframes modalAnimateTop{
 	0%{
