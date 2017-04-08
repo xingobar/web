@@ -18,7 +18,6 @@ li:hover{
 	background-color: #ffebee;
 	width: 100%;
 }
-
 .fa-2x {
 	font-size: 1.5em !important;
 }
@@ -55,6 +54,15 @@ li:hover{
 }
 .main-menu:hover{	
 	width: 200px;
+}
+.main-menu:hover .fa-2x{
+	transition:transform 1.65s cubic-bezier(0.680, -0.550, 0.265, 1.550);
+}
+.main-menu:hover .fa-2x:hover{
+	transform: rotate(360deg);
+}
+.main-menu .fa-2x:not(:hover){
+	transform: rotate(-360deg);
 }
 .main-menu li{
 	display: block;
