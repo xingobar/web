@@ -4,6 +4,9 @@ ul li{
 	padding: 0;
 	list-style-type: none;
 }
+ul{
+	padding-left: 0px;
+}
 li a{
 	text-decoration: none;
 	color:black;
@@ -11,8 +14,23 @@ li a{
 li a:hover{
 	color: #ef5350 ;
 }
+li:hover{
+	background-color: #ffebee;
+	width: 100%;
+}
+
 .fa-2x {
-	font-size: 2em;
+	font-size: 2em ;
+}
+.fa{
+	position: relative;
+	display: table-cell;
+	width: 60px;
+	height: 36px;
+	text-align: center;
+	vertical-align: middle;
+	font-size: 20px;
+	top:5px;
 }
 .main-menu ul li{
 	margin-top:20px;
@@ -25,9 +43,80 @@ li a:hover{
 	bottom: 0;
 	height: 100%;
 	left:0;
-	width: 20%;
+	width: 52px;
 	overflow: hidden;
-	transform: width 0.5s linear;
-	-webkit-transform:translateZ(0) scale(1,1);
+	box-shadow: 5px 5px 5px #bdbdbd;
+	/*transform: width 0.5s linear;*/
+
+	animation-duration: 1s;
+	animation-iteration-count: 1;
+	/*http://stackoverflow.com/questions/3087360/cant-stop-animation-at-end-of-one-cycle*/
+	/* leaves the animation in the state of the last frame*/
+	animation-fill-mode: forwards;
+
+	-webkit-animation-duration:1s;
+	-moz-animation-duration:1s;
+	-o-animation-duration:1s;
+
+	-webkit-animation-iteration-count:1;
+	-moz-animation-iteration-count:1;
+	-o-animation-iteration-count:1;
+
+	-webkit-animation-fill-mode:forwards;
+	-moz-animation-fill-mode:forwards;
+	-o-animation-fill-mode:forwards;
+
+
+	-webkit-transition-timing-function: cubic-bezier(0.600, 0, 0.735, 0.045); /* older webkit */
+    -webkit-transition-timing-function: cubic-bezier(0.600, -0.280, 0.735, 0.045); 
+	-moz-transition-timing-function: cubic-bezier(0.600, -0.280, 0.735, 0.045); 
+	-o-transition-timing-function: cubic-bezier(0.600, -0.280, 0.735, 0.045); 
+	transition-timing-function:  cubic-bezier(0.600, -0.280, 0.735, 0.045)
 	z-index: 1000;
+}
+.main-menu:hover{	
+	animation-name: sidebar;
+}
+@keyframes sidebar{
+	100%{
+		width: 150px;
+	}
+}
+@-webkit-keyframes sidebar{
+	100%{
+		width: 150px;
+	}
+}
+@-moz-keyframes sidebar{
+	100%{
+		width: 150px;
+	}
+}
+@-o-keyframes sidebar{
+	100%{
+		width: 150px;
+	}
+}
+.mouseLeave{
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+	animation-iteration-count: 1;
+	transition-timing-function:  cubic-bezier(0.600, -0.280, 0.735, 0.045);
+	animation-name: mouseLeave;
+}
+@keyframes mouseLeave{
+	100%{
+		width: 52px;
+	}
+}
+
+.main-menu li{
+	display: block;
+	position: relative;
+	width: 250px;
+}
+.area{
+	float: left;
+	width: 100%;
+	height: 100%;
 }
