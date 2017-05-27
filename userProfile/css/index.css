@@ -1,0 +1,91 @@
+body,.info{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+html{
+	height: 100%;
+}
+body{
+	width:100%;
+	min-height: 100%;
+	background: #009688;
+	font-size:16px;
+	overflow: hidden;
+}
+.content{
+	position: relative;
+	animation:animateTop 0.9s cubic-bezier(0.425, 1.14, 0.47, 1.125)  forwards;
+}
+.card{
+	width: 500px;
+	min-height: 100px;
+	padding:20px;
+	background-color: white;
+	position: relative;
+	overflow: hidden;
+	border-radius: 3px;
+	box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+.card::after{
+	content:'';
+	position: absolute;
+	display: block;
+	width: 190px;
+	height: 300px;
+	background: cadetblue;
+	animation:rotatemagic 0.75s cubic-bezier(0.425, 1.14, 0.47, 1.125)  1s both;
+}
+.info{
+	z-index: 2;
+	position: relative;
+}
+.info img{
+	border-radius: 50%;
+	width: 120px;
+	height: 120px;
+	position: absolute;
+	left:0;
+}
+.info .profile-info{
+	padding:0px 20px;
+	padding-left:150px;
+}
+.info .profile-info h1{
+	font-size:1.8em;
+}
+.info .profile-info h3{
+	font-size:1.15em;
+	color:teal;
+	font-style: italic;
+}
+.profile-info .description{
+	line-height: 1.2;
+	color: #5A5A5A;
+}
+@keyframes animateTop{
+	0%{
+		opacity: 0;
+		bottom: -500px;
+	}
+	100%{
+		opacity: 1;
+		bottom: 0px;
+	}
+}
+@keyframes rotatemagic{
+	0%{
+		opacity: 0%;
+		transform:rotate(0deg);
+		top:-24px;
+		left:-253px;
+	}
+	100%{
+		transform: rotate(-30deg);
+		top:-24px;
+		left:-30px;
+	}
+}
+
+
+
